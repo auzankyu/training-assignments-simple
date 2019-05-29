@@ -9,6 +9,11 @@ public class BoardFactory {
 
         int width = board.getWidth();
         int height = board.getHeight();
+
+        return foreach(width, height, board);
+    }
+
+    private Board foreach(int width, int height, Board board) {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 Square square = grid[x][y];
